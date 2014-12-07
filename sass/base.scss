@@ -1,0 +1,357 @@
+/* base.scss */
+@import 'rules';
+
+/* Globals */
+.title-area {width:auto; cursor:default;}
+#intro, #skills, #portfolio, #resume, #about {margin-bottom:50px;}
+.container-master {width:92%; margin:0 auto; padding-top:85px;}
+* {-webkit-transition: all 0.2s ease; transition: all 0.2s ease;}
+.spacer120 {clear:both; width:100%; height:120px;}
+.scrolled {padding-top:85px;}
+
+/* UI Elements */
+.cta-button {
+	width:200px;
+	height:40px;
+	font-family:$title;
+	font-weight:700;
+	text-align:center;
+	font-size:120%;
+	padding-top:6px;
+	text-shadow:$ts-white;
+}
+.cta-button:hover {
+	border:1px solid $ltgrey-hl;
+	background:$font;
+	color:$ltgrey-hl;
+	text-shadow:none;
+}
+.sk-badge {
+	position:relative;
+	display:inline-block;
+	margin:0 25px 20px 0;
+	width:22%;
+	height:95px;
+	border:1px solid #f5f5f5;
+	text-align:center;
+	font-family:$title;
+	text-transform:uppercase;
+	font-weight:700;
+	font-size:165%;
+	padding:25px 20px 0 20px;
+	cursor:default;
+		.foot {
+			position:absolute;
+			z-index:1001;
+			bottom:0;
+			left:0;
+			width:100%;
+			height:16px;
+			font-size:11px;
+			background-color:$sk-badgefoot;
+			padding-left:8px;
+			color:$font;
+			text-align:left;
+		}
+}
+.pf-box {
+	position:relative;
+	display:inline-block;
+	width:300px;
+	height:150px;
+	clear:both;
+	cursor:pointer;
+	
+		.foot {
+			position:absolute;
+			z-index:1001;
+			bottom:0;
+			left:0;
+			width:100%;
+			height:16px;
+			font-size:11px;
+			font-weight:700;
+			background-color:#d2d2d2;
+			padding-left:8px;
+			padding-top:1px;
+			color:$font;
+			text-align:left;
+		}
+		.foot span {float:right; margin-right:8px;}
+		img {
+			height:135px;
+			width:100%;
+			vertical-align:top;
+		}
+}
+.rs-box {
+	@extend .pf-box;
+	width:420px;
+	height:405px;
+	cursor:default;
+		img {
+			width:100%;
+			height:96%;
+		}
+}
+
+/*-------------------
+	Site Styling	
+-------------------*/
+
+/* Navigation */
+#navi {
+	position:absolute;
+	top:15px;
+	width:100%;
+	font-family:$title;
+	text-transform:uppercase;
+	font-weight:700;
+	font-size:100%;
+	background-image:url('../images/pat.png');
+	padding:1px 0 4px 0;
+	margin-bottom:10px;
+		ul {
+			display:table;
+			margin:15px auto 15px auto;
+		}
+		li {
+			/* gradient+shadow @ _gradient.scss */
+			display:inline-block;
+			width:105px;
+			height:30px;
+			padding-top:4px;
+			border:1px solid #f5f5f5;
+			text-shadow:$ts-white;
+			margin:0;
+			text-align:center;
+			list-style-type:none;
+			cursor:pointer;
+		}
+		li:last-child {margin-right:0;}
+		.active {
+			//color:$bodylink;
+		}
+		h5 {display:none;}
+}
+#navi.stick {
+	position:fixed;
+	top:0;
+	width:100%;
+	z-index:1003;
+	background-image:none;
+	margin-top:0;
+	padding:0;
+		ul {
+			margin:0 auto;
+			padding:0;
+		}
+}
+
+/* Intro */
+#blurb {
+	text-align:justify;
+	max-width:100%;
+		p {
+			font-size:85%;
+			margin-bottom:15px;
+				a {
+					color:$bodylink;
+					border-bottom:1px dotted $bodylink;
+				}
+				img {
+					float:left;
+					margin:0 10px 5px 0;
+					width:250px;
+					height:250px;
+					background-color:transparent;
+					border:6px solid $moregrey;
+				}
+		}
+		.cta-button {
+			float:right;
+		}
+}
+
+/* Portfolio */
+#portfolio {
+	font-family:$title;
+}
+.nav-sort {
+	font-size:75%;
+	font-weight:700;
+	color:$offgrey;
+	margin-bottom:35px;
+		ul {
+			display:inline-block;
+		}
+		li {
+			display:inline-block;
+			list-style-type:none;
+			background-color:$ltgrey;
+			border-bottom:3px solid $bg;
+			text-align:center;
+			padding:2px 4px;
+			color:$font;
+			cursor:pointer;
+			margin-right:2px;
+		}
+		li:hover, li.active {
+			border-bottom:3px solid $moregrey;
+		}
+		li:last-child {margin-right:0;}
+}
+.pf-box {
+	margin:0 25px 25px 0;
+	border:1px solid #f5f5f5;
+}
+#pf-modal {
+		.modal-dialog {
+			background-color:$ltgrey-hl;
+			width:80%;
+			height:70%;
+			background-color:transparent;
+		}
+		.modal-content {
+			width:100%;
+			height:100%;
+			border:none;
+			box-shadow:none;
+			background-color:transparent;
+				.close {
+					z-index:1300;
+					padding:30px;
+					position:absolute;
+					top:0;
+					right:0;
+					color:$ltgrey-hl;
+					background-color:rgba(0,0,0,.8);
+					@include opacity(1);
+				}
+				.close:before {
+					content:"X";
+				}
+				.picture {
+					width:auto;
+					max-width:100%;
+					height:100%;
+					background: rgba(255,255,255,.5) no-repeat center center; 
+					-webkit-background-size: contain;
+					-moz-background-size: contain;
+					-o-background-size: contain;
+					background-size: contain;
+				}
+				.description {
+					position:absolute;
+					display:none;
+					z-index:1250;
+					bottom:0;
+					width:100%;
+					height:25%;
+					background-color:rgba(0,0,0,.8);
+					color:$ltgrey-hl;
+					padding:4px;
+					background-image:none;
+						h5, p {
+							text-shadow:none;
+							color:$ltgrey-hl;
+							margin:0;
+							padding:0;
+						}
+						h5 {font-size:100%; padding-bottom:3px;}
+						p {font-size:80%;}
+						p.first {
+							margin-bottom:6px;
+						}
+						a {
+							font-family:$title;
+							color:$green;
+							font-weight:700;
+							font-size:85%;
+						}
+						a.notlive {
+							color:$red;
+						}
+				}
+				.description.active {
+					display:block;
+				}
+		}
+}
+/*BS 3.3.1 modal-shift fix*/
+body {overflow-y: scroll;}
+.modal {overflow: auto;}
+body.modal-open {overflow-y: scroll; margin: 0; padding:0;}
+
+/* Resume */
+.resume-view {
+	float:left;
+		.rs-box {
+			margin-right:35px;
+		}
+}
+.resume-links {
+	float:left;
+		.links {
+			display:inline;
+		}
+}
+.rs-button {
+	position:relative;
+	display:block;
+	width:150px;
+	margin:0 0 12px 0;
+	padding:4px 6px 4px 40px;
+	font-family:$title;
+	font-size:110%;
+	cursor:pointer;
+	background-image:url('../images/download.png');
+	background-position:9px 9px;
+	background-repeat:no-repeat;
+	font-weight:700;
+}
+.rs-button:before {
+	content: " ";
+	position:absolute;
+	left:30px;
+	top:0;
+	width:1px;
+	height:100%;
+	border-left:1px solid #d7d7d7;
+	border-right:1px solid #fff;
+}
+.rs-button:first-child {
+	margin-top:25px;
+}
+
+/* About */
+#about {
+
+		h2 {
+			width:100%;
+			padding-bottom:2px;
+			margin-bottom:8px;
+		}
+}
+
+/* Foot */
+#foot {
+	width:100%;
+	height:120px;
+	text-align:center;
+	background-image:url('../images/pat.png');
+		h1 {
+			display:block;
+			color:$moregrey;
+		}
+		h2 a {
+			display:block;
+			color:$font;
+			margin-top:10px;
+			margin-bottom:11px;
+		}
+}
+
+/* Grab Media Queries */
+@import 'responsive';
+@import 'portfolio';

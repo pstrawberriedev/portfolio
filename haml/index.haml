@@ -1,0 +1,233 @@
+!!!
+%html{"lang" => "en"}
+	%head
+		%meta{"charset" => "utf-8"}
+		%meta{"http-equiv" => "X-UA-Compatible", "content" => "IE=edge"}
+		%meta{"name" => "viewport", "content" => "width=device-width, initial-scale=1"}
+		%title Josh DePaolo
+		%link{"rel" => "stylesheet", "href" => "../css/bootstrap.min.css", "type" => "text/css"}
+		%link{"rel" => "stylesheet", "href" => "../css/base.css", "type" => "text/css"}
+		<!--[if lt IE 9]>
+		<script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+		<script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+		<![endif]-->
+	%body
+		#pf-modal.modal.fade{:tabindex=>"-1"}
+			.modal-dialog
+				.modal-content
+					.close{"data-dismiss" => "modal"}
+					.picture
+					.description.ifixit
+						.row
+							.col-sm-6.overview
+								%h5 iFixit
+								%p.first
+									iFixit is a local electronics repair shop in Thornton, CO.
+								%a{:href=>"http://www.ifixitllc.com", "target" => "_blank"} Visit Live Site &raquo;
+							.col-sm-6.technology
+								%h5 How it was done
+								%p
+									The focus for iFixit was a solid responsive base, as the client receives many mobile phone repairs. This site was created using a custom Photoshop design into HTML and CSS/SASS, Bootstrap, some jQuery for UI fanciness, a custom WordPress theme, and WordPress PHP manipulation.
+					.description.dodge
+						.row
+							.col-sm-6.overview
+								%h5 Dodge Customizer
+								%p.first
+									A Dodge RAM Application to customize vehicles.
+								%a{:href=>"http://www.ramtrucks.com/en/ram_commercial/custom_graphics", "target" => "_blank"} Visit Live Site &raquo;
+							.col-sm-6.technology
+								%h5 How it was done
+								%p
+									I worked with the team over at <a href="http://pendulumproductions.com" target="_blank">Pendulum Productions</a> as the front-end coder for this application. I took the Dodge Designs from Photoshop and sliced them into a static HTML and CSS/SASS frame for the team to implement into a Ruby on Rails environment. This project is one of my favorites!
+					.description.dean
+						.row
+							.col-sm-6.overview
+								%h5 Dean DePaolo
+								%p.first
+									Dean is a Christian singer in Denver, CO.
+								%a{:href=>"http://www.deandepaolo.com", "target" => "_blank"} Visit Live Site &raquo;
+							.col-sm-6.technology
+								%h5 How it was done
+								%p
+									I've been working on my Dad's site since I learned how to slice a table-based layout in pre-Adobe Fireworks. This version was focused on the media player - I wanted it to keep playing even when pages were navigated to and fro. The solution was AJAX, mixed in with a custom design from a Static HTML and CSS Photoshop slice, into a custom WordPress theme.
+					.description.pikkas
+						.row
+							.col-sm-6.overview
+								%h5 Pikkas
+								%p.first
+									Pikkas is a Peruvian restaurant in Cherry Creek, CO.
+								%a{:href=>"http://www.pikkasdenver.com", "target" => "_blank"} Visit Live Site &raquo;
+							.col-sm-6.technology
+								%h5 How it was done
+								%p
+									Pikkas wanted a clean, professional WordPress site with some flavor. I set up a WordPress theme from Themeforest for them, adding in functionality for displaying various restaurant menus. This site was mostly WordPress PHP manipulation, with some minor graphical manipulation.
+					.description.renew
+						.row
+							.col-sm-6.overview
+								%h5 Renew IT
+								%p.first
+									Renew IT is a computer repair shop in Westminster, CO.
+								%a.notlive Site no longer Live
+							.col-sm-6.technology
+								%h5 How it was done
+								%p
+									Renew IT has a strong Spanish-speaking client base. The emphasis for them was something simple that could display both English and Spanish. The solution was AJAX which switched between EN/ES WordPress pages. This site was conjured in Photoshop, sliced into static HTML and CSS, and whipped up into a custom WordPress theme. The site is no longer live due to domain troubles.
+					.description.level
+						.row
+							.col-sm-6.overview
+								%h5 iFixit
+								%p.first
+									Level Up is a local Video Game store in Denver, CO.
+								%a{:href=>"http://www.levelupgaminginc.com", "target" => "_blank"} Visit Live Site &raquo;
+							.col-sm-6.technology
+								%h5 How it was done
+								%p
+									Level Up has been one of my longest-stretching projects. The first iteration of this site was in 2011 - it has since gone through Joomla and Drupal, finally ending up in WordPress. This site was sliced from a custom design focused on being shiny and clean, into static HTML and CSS with some jQuery, and finally into a custom WordPress theme.
+		#top
+		#navi
+			%h5 Navigation
+			%ul
+				%li
+					%a{"href" => "#skills"} Skills
+				%li
+					%a{"href" => "#portfolio"} Portfolio
+				%li.no-xs
+					%a{"href" => "#resume"} Resume
+				%li
+					%a{"href" => "#about"} About
+		.container-master
+			#anchor
+			#intro.clearfix
+				.title-area
+					.title-button
+					%h1 Josh DePaolo
+					.sep-full
+				#blurb
+					%p
+						%img{"src" => "../images/me.png"}
+						Welcome to my little slice of job-seeking heaven. I’m a hybrid developer/designer in the Denver area looking for the right opportunity with a lovely group of individuals. I’ve got several years of experience under my belt working solo freelance, as well as on (very) small teams. My strengths are on the front-end of the web - I love taking gorgeous designs and slicing them into fully-functional web sites. I’ve also worked heavily with the WordPress CMS creating custom themes. <a href="#portfolio">Check out my portfolio</a> to see the work I’ve done. If you think I might be a good fit for your team...
+					%a{"href" => "mailto:me@jdepaolo.com"}
+						.cta-button
+							Say hello!
+			#skills
+				.title-area
+					.title-button
+					%h1 Skills
+					.sep-full
+				.sk-badges
+					.sk-badge.blue
+						HTML
+						.foot
+							+HAML
+					.sk-badge.rust
+						CSS
+						.foot
+							+SASS
+					.sk-badge.green
+						JS
+						.foot
+							+jQuery
+					.sk-badge.strawberry
+						Photoshop
+						.foot
+							+Design
+					.sk-badge.purple
+						Wordpress
+						.foot
+							+Themes
+					.sk-badge.red
+						PHP
+						.foot
+			#portfolio
+				.title-area
+					.title-button
+					%h1 Portfolio
+					.sep-full
+				.nav-sort
+					Sort by:
+					%ul
+						%li.sort-all
+							All Projects
+						%li.sort-live
+							Live
+						%li.sort-custom
+							Custom Design
+						%li.sort-wordpress
+							WordPress
+						%li.sort-responsive
+							Responsive
+				.portfolio-items
+					.pf-box#ifixit.sort-all.sort-live.sort-custom.sort-wordpress.sort-responsive{"data-toggle" => "modal", "data-target" => "#pf-modal"}
+						%img{"src" => "../images/ifixit_sm.png"}
+						.foot
+							iFixit, LLC <span>2014</span>
+					.pf-box#dodge.sort-all.sort-live{"data-toggle" => "modal", "data-target" => "#pf-modal"}
+						%img{"src" => "../images/dodge_sm.png"}
+						.foot
+							Dodge RAM <span>2014</span>
+					.pf-box#dean.sort-all.sort-live.sort-custom.sort-wordpress{"data-toggle" => "modal", "data-target" => "#pf-modal"}
+						%img{"src" => "../images/dean_sm.png"}
+						.foot
+							Dean DePaolo <span>2013</span>
+					.pf-box#pikkas.sort-all.sort-live.sort-wordpress.sort-responsive{"data-toggle" => "modal", "data-target" => "#pf-modal"}
+						%img{"src" => "../images/pikkas_sm.png"}
+						.foot
+							Pikkas Denver <span>2013</span>
+					.pf-box#renew.sort-all.sort-custom.sort-wordpress{"data-toggle" => "modal", "data-target" => "#pf-modal"}
+						%img{"src" => "../images/renew_sm.png"}
+						.foot
+							Renew IT Computers <span>2013</span>
+					.pf-box#level.sort-all.sort-live.sort-custom.sort-wordpress{"data-toggle" => "modal", "data-target" => "#pf-modal"}
+						%img{"src" => "../images/level_sm.png"}
+						.foot
+							Level Up Gaming <span>2013</span>
+			#resume.clearfix.no-xs
+				.title-area
+					.title-button
+					%h1 Resume
+					.sep-full
+				.resume-view
+					.rs-box
+						%img{"src" => "../images/resume.png"}
+						.foot
+							2014 Resume
+				.resume-links
+					%h2 Download my Resume
+					.links
+						%a{:href=>"http://www.jdepaolo.com/resume/Resume_JoshDePaolo.txt", "target" => "_blank"}
+							.rs-button
+								Plain Text
+						%a{:href=>"http://www.jdepaolo.com/resume/Resume_JoshDePaolo.docx", "target" => "_blank"}
+							.rs-button
+								MS Word
+						%a{:href=>"http://www.jdepaolo.com/resume/Resume_JoshDePaolo.pdf", "target" => "_blank"}
+							.rs-button
+								PDF
+			#about
+				.title-area
+					.title-button
+					%h1 About
+					.sep-full
+				.row
+					.col-sm-6
+						%h2 Career
+						%p
+							When I was in 8th grade, I got my very own computer from the local PC shop. In between games of Counter-strike, I fiddled around with Yahoo’s Geocities and made a couple web sites about Star Wars and other awesome stuff. I soon picked up paint shop pro and some very basic HTML. I registered a domain, got a cheap host with my parents’ credit card, and made a site to host homework assignments and notes. I ran it for a few months until my teachers told me to take it down. It seemed students began skipping class notes...slackers.<br /><br />
+							The rest is history! I worked in the retail industry for a long while before realizing that I could turn my hobby into something that might eventually support me financially and bring me much more joy than dealing with grumpy people in a check-out line. Over the years, I’ve developed my skills making web sites for family members, local organizations, friends, and my own personal projects. I’ve finally reached the point where I can do this for a living!<br /><br />
+							What I love about making web sites is the freedom and the expression. I can create a design that adheres to modern web standards while injecting my own flavor into the mix. I can work in my customized environment, tucked away in my own little world, create shortcuts that increase the efficiency of my work flow...all the while knowing I am doing something I actually enjoy. It’s a beautiful career; one I hadn’t even imagined was possible. I’m very thankful for the internet and the unique opportunity it has allowed me.
+					.col-sm-6
+						%h2 Personal
+						%p
+							I am a lively chap with a chipper, cordial disposition. I believe in traversing life with a sense of humility and an open mind. In my spare time, you'll generally find me writing, watching films, or playing a computer game. I've taken to a minimal style, both in my creations and in my personal life - I appreciate simplicity and space.<br /><br />
+							Second to creating web sites, I very much enjoy psychology. I think humans are very interesting creatures; I'm an avid fan of emotions and their diverse forms of colorful display.<br /><br />
+							Janeway is my favorite captain, followed closely by Picard and Sisko. I'm a chili-cheese Frito fiend and I take my coffee #000.
+					.spacer120
+		#foot
+			%h2
+				%a{"href" => "#top"}
+					Back to top
+			%h1 Thanks for visiting!
+		
+		%script{"src" => "../js/jquery-1.11.1.min.js"}
+		%script{"src" => "../js/bootstrap.min.js"}
+		%script{"src" => "../js/script.js"}

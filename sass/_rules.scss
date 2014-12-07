@@ -1,0 +1,80 @@
+/* rules.scss */
+
+/* Mixins */
+@mixin opacity($opacity) {
+	-moz-opacity: $opacity;
+	-khtml-opacity: $opacity;
+	opacity: $opacity;
+	$opacity-ie: $opacity * 100;
+	filter: progid:DXImageTransform.Microsoft.Alpha(opacity=$opacity-ie);
+}
+
+/* Fonts */
+@import url(http://fonts.googleapis.com/css?family=Open+Sans:400,600|Roboto+Slab:400,700);
+$copy: 'Open Sans', Arial, 'Helvetica Neue', Helvetica, sans-serif;
+$title: 'Roboto Slab', Georgia, Times, 'Times New Roman', serif;
+
+/* Colors */
+$bg: #f0f0f0;
+$font: #363636;
+$ltgrey: #e6e6e6;
+$ltgrey-hl: #f3f3f3;
+$bodylink: #a0a0a0;
+$x-ltgrey: #dedede;
+$offgrey: #5b5b5b;
+$moregrey: #c7c7c7;
+$blue: #288ac3;
+$rust: #c36a28;
+$green: #28c354;
+$strawberry: #c3285f;
+$purple: #7828c3;
+$red: #c32833;
+$sk-badgefoot: rgba(0, 0, 0, 0.11);
+
+/* Color classes */
+.blue {color:$blue;}
+.rust {color:$rust;}
+.green {color:$green;}
+.strawberry {color:$strawberry;}
+.purple {color:$purple;}
+.red {color:$red;}
+
+
+/* Stylistic */
+$ts-white: 0px 1px 0px rgba(255, 255, 255, 1);
+
+
+/* Globals */
+ul, menu, dir {-webkit-margin-before: 0px; -webkit-margin-after: 0px; -webkit-margin-start: 0px; -webkit-margin-end: 0px; -webkit-padding-start: 0px;}
+h1,h2,h3,h4,h5 {display:inline-block; font-family:$title; text-shadow:$ts-white; color:$font; margin:0; padding:0; vertical-align:middle; font-weight:700;}
+p {font-family:$copy; color:$font; margin:0; padding:0;}
+a, span {font-family:inherit; color:$font;}
+a, a:link, a:visited, a:hover, a:active {color:inherit; text-decoration:none;}
+body {background-color:$bg;}
+
+/* Layout */
+.sep-full {
+	width:100%;
+	height:2px;
+	margin:0 0 15px 0;
+	background-color:#fff;
+	border-top:1px solid #cacaca;
+}
+.title-button {
+	font-family:$copy;
+	display:inline-block;
+	width:16px;
+	height:16px;
+	background-color:$ltgrey;
+	margin:0 12px 0 3px;
+	border:1px solid $ltgrey-hl;
+	font-weight:600;
+	font-size:150%;
+	text-align:center;
+	line-height:11px;
+	vertical-align:middle;
+}
+.title-button:after {content: "-";}
+
+/* Imports */
+@import 'gradient';
